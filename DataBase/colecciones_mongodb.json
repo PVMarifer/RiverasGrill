@@ -1,0 +1,107 @@
+{
+  "usuarios": [
+    {
+      "_id": "c99a5ab3-ad99-4209-ae69-d31c7bc615fe",
+      "nombre": "Juan Pérez",
+      "email": "juan@example.com",
+      "telefono": "8888-8888",
+      "direccion": "San José, Costa Rica",
+      "rol": "cliente",
+      "fecha_registro": "2025-04-11T23:57:44.978531"
+    }
+  ],
+  "productos": [
+    {
+      "_id": "9cc50ed9-7102-4222-a2ab-b104f82c4b82",
+      "nombre": "Café Premium",
+      "descripción": "Café 100% orgánico",
+      "precio": 4500,
+      "categoria_id": "14bc90db-020a-4170-8b7d-1ec3bbdb5f9e",
+      "stock": 100,
+      "imágenes": [
+        "https://ejemplo.com/img1.jpg",
+        "https://ejemplo.com/img2.jpg"
+      ],
+      "fecha_creacion": "2025-04-11T23:57:44.978531"
+    }
+  ],
+  "categorias": [
+    {
+      "_id": "ca7f2c98-9661-4372-9da4-f8b6c4f19aa1",
+      "nombre": "Bebidas",
+      "descripcion": "Bebidas frías y calientes"
+    }
+  ],
+  "ordenes": [
+    {
+      "_id": "2cf03629-9143-44b1-ba65-c88da6e2db8a",
+      "usuario_id": "fe4fe337-dcff-4268-81fa-64e58e89fade",
+      "productos": [
+        {
+          "producto_id": "74ca1f83-c99a-4557-98d2-ad5a7056f2a6",
+          "cantidad": 2,
+          "precio": 4500
+        }
+      ],
+      "total": 9000,
+      "estado": "pendiente",
+      "fecha_compra": "2025-04-11T23:57:44.978531"
+    }
+  ],
+  "pagos": [
+    {
+      "_id": "d71a2148-8f74-4e25-8bb7-dc4f451c18e1",
+      "orden_id": "23d26dd5-cc8a-4e88-a796-7533355317e3",
+      "metodo_pago": "tarjeta",
+      "estado_pago": "pagado",
+      "fecha_pago": "2025-04-11T23:57:44.978531"
+    }
+  ],
+  "menus": [
+    {
+      "_id": "a01e94f4-bd95-47bb-a365-a0306b6b7038",
+      "nombre": "Desayuno Típico",
+      "descripcion": "Gallo pinto con huevos y café",
+      "precio": 3000,
+      "disponibilidad": true,
+      "fecha_actualizacion": "2025-04-11T23:57:44.978531"
+    }
+  ],
+  "reservaciones": [
+    {
+      "_id": "665fad2e-61b0-48b8-9103-f231285902fd",
+      "usuario_id": "d979576f-04f8-43ff-8876-4527aacccd97",
+      "menu_id": "24a6dcb6-7a10-4f6e-97c1-7a0ce6aa2dd0",
+      "fecha_reservacion": "2025-04-20T08:00:00Z",
+      "estado": "confirmada",
+      "cantidad_personas": 4
+    }
+  ],
+  "comentarios": [
+    {
+      "_id": "588e48b1-9bd9-492a-8dfb-4d896699e6e6",
+      "usuario_id": "81b96b0f-218d-4924-81d2-5ec6f0925b21",
+      "producto_id": "54f807bb-244a-42c6-a546-d99e703844b1",
+      "puntuacion": 5,
+      "comentario": "¡Excelente producto!",
+      "fecha_comentario": "2025-04-11T23:57:44.978531"
+    }
+  ],
+  "descuentos": [
+    {
+      "_id": "0b18151a-271d-4fa2-9608-d801aad31e3e",
+      "producto_id": "80615ea0-959a-4a47-8113-92c2f2e3dafd",
+      "porcentaje_descuento": 15,
+      "fecha_inicio": "2025-04-10T00:00:00Z",
+      "fecha_fin": "2025-04-20T23:59:59Z"
+    }
+  ],
+  "notificaciones": [
+    {
+      "_id": "2a7f1bc9-27c2-4384-81e3-2d04f127ca94",
+      "usuario_id": "66772b14-f059-40b0-a061-f7d8e835064b",
+      "tipo": "promoción",
+      "mensaje": "¡No te pierdas nuestras ofertas de abril!"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+
+
+// PRODUCTOS
+db.productos.insertOne({ nombre: "Nuevo Producto", descripción: "Descripción", precio: 1000, categoria_id: ObjectId(), stock: 10, imágenes: [], fecha_creacion: new Date() });
+db.productos.find({});
+db.productos.findOne({ nombre: "Nuevo Producto" });
+db.productos.updateOne({ nombre: "Nuevo Producto" }, { $set: { precio: 2000 } });
+db.productos.deleteOne({ nombre: "Nuevo Producto" });
+
+// CATEGORIAS
+db.categorias.insertOne({ nombre: "Nueva Categoría", descripcion: "Descripción de categoría" });
+db.categorias.find({});
+db.categorias.findOne({ nombre: "Nueva Categoría" });
+db.categorias.updateOne({ nombre: "Nueva Categoría" }, { $set: { descripcion: "Modificada" } });
+db.categorias.deleteOne({ nombre: "Nueva Categoría" });
+
+// ÓRDENES
+db.ordenes.insertOne({ usuario_id: ObjectId(), productos: [], total: 0, estado: "pendiente", fecha_compra: new Date() });
+db.ordenes.find({});
+db.ordenes.findOne({ estado: "pendiente" });
+db.ordenes.updateOne({ estado: "pendiente" }, { $set: { estado: "completada" } });
+db.ordenes.deleteOne({ estado: "completada" });
+
+// PAGOS
+db.pagos.insertOne({ orden_id: ObjectId(), metodo_pago: "tarjeta", estado_pago: "pendiente", fecha_pago: new Date() });
+db.pagos.find({});
+db.pagos.findOne({ metodo_pago: "tarjeta" });
+db.pagos.updateOne({ metodo_pago: "tarjeta" }, { $set: { estado_pago: "pagado" } });
+db.pagos.deleteOne({ metodo_pago: "tarjeta" });
+
+// MENÚS
+db.menus.insertOne({ nombre: "Almuerzo Ejecutivo", descripcion: "Incluye bebida", precio: 3500, disponibilidad: true, fecha_actualizacion: new Date() });
+db.menus.find({});
+db.menus.findOne({ nombre: "Almuerzo Ejecutivo" });
+db.menus.updateOne({ nombre: "Almuerzo Ejecutivo" }, { $set: { disponibilidad: false } });
+db.menus.deleteOne({ nombre: "Almuerzo Ejecutivo" });
+
+// RESERVACIONES
+db.reservaciones.insertOne({ usuario_id: ObjectId(), menu_id: ObjectId(), fecha_reservacion: new Date(), estado: "confirmada", cantidad_personas: 2 });
+db.reservaciones.find({});
+db.reservaciones.findOne({ estado: "confirmada" });
+db.reservaciones.updateOne({ estado: "confirmada" }, { $set: { estado: "cancelada" } });
+db.reservaciones.deleteOne({ estado: "cancelada" });
+
+// COMENTARIOS
+db.comentarios.insertOne({ usuario_id: ObjectId(), producto_id: ObjectId(), puntuacion: 4, comentario: "Muy bueno", fecha_comentario: new Date() });
+db.comentarios.find({});
+db.comentarios.findOne({ puntuacion: 4 });
+db.comentarios.updateOne({ puntuacion: 4 }, { $set: { comentario: "Excelente" } });
+db.comentarios.deleteOne({ puntuacion: 4 });
+
+// DESCUENTOS
+db.descuentos.insertOne({ producto_id: ObjectId(), porcentaje_descuento: 10, fecha_inicio: new Date(), fecha_fin: new Date("2025-12-31") });
+db.descuentos.find({});
+db.descuentos.findOne({ porcentaje_descuento: 10 });
+db.descuentos.updateOne({ porcentaje_descuento: 10 }, { $set: { porcentaje_descuento: 15 } });
+db.descuentos.deleteOne({ porcentaje_descuento: 15 });
+
+// NOTIFICACIONES
+db.notificaciones.insertOne({ usuario_id: ObjectId(), tipo: "recordatorio", mensaje: "Tienes un cupón disponible" });
+db.notificaciones.find({});
+db.notificaciones.findOne({ tipo: "recordatorio" });
+db.notificaciones.updateOne({ tipo: "recordatorio" }, { $set: { mensaje: "¡Última oportunidad!" } });
+db.notificaciones.deleteOne({ tipo: "recordatorio" });
